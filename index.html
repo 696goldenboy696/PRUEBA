@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Préstamos — Control y Gestión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">💰</div>
+        <div>
+          <strong>Mi Préstamos</strong>
+          <span>Controla · Gestiona · Crece</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-module="inicio">🏠 <span>Inicio</span></button>
+        <button class="nav-item" data-module="clientes">👥 <span>Clientes</span></button>
+        <button class="nav-item" data-module="prestamos">💰 <span>Préstamos</span></button>
+        <button class="nav-item" data-module="cobrar">💵 <span>Cobrar</span></button>
+        <button class="nav-item" data-module="pagos">💳 <span>Pagos</span></button>
+        <button class="nav-item" data-module="calendario">📅 <span>Calendario</span></button>
+        <button class="nav-item" data-module="atrasados">🔴 <span>Atrasados</span></button>
+        <button class="nav-item" data-module="caja">💼 <span>Caja</span></button>
+        <button class="nav-item" data-module="reportes">📊 <span>Reportes</span></button>
+        <button class="nav-item" data-module="ia">🤖 <span>Asistente IA</span></button>
+        <button class="nav-item" data-module="configuracion">⚙️ <span>Configuración</span></button>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="avatar">A</div>
+        <div>
+          <strong>Administrador</strong>
+          <span>admin@miprestamos.com</span>
+        </div>
+        <button title="Cerrar sesión">↪</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div>
+          <h1 id="pageTitle">Buenos días, Administrador 👋</h1>
+          <p id="pageSubtitle">Aquí tienes un resumen de tu negocio de préstamos.</p>
+        </div>
+        <div class="topbar-right">
+          <span>📅 14 de septiembre de 2026</span>
+          <span class="notification">🔔 <b>3</b></span>
+          <div class="top-user">👤 Administrador ▾</div>
+        </div>
+      </header>
+
+      <section class="content" id="content">
+        <!-- Dashboard -->
+        <div id="module-inicio" class="module active">
+          <section class="metrics">
+            <article class="metric blue"><span>💰</span><div><small>Total prestado</small><strong>S/ 25,000</strong><em>↑ 12% vs. mes anterior</em></div></article>
+            <article class="metric green"><span>💵</span><div><small>Total cobrado</small><strong>S/ 18,500</strong><em>↑ 18% vs. mes anterior</em></div></article>
+            <article class="metric purple"><span>📄</span><div><small>Pendiente de cobro</small><strong>S/ 9,200</strong><em>↑ 5% vs. mes anterior</em></div></article>
+            <article class="metric orange"><span>👥</span><div><small>Clientes activos</small><strong>48</strong><em>↑ 6% vs. mes anterior</em></div></article>
+            <article class="metric red"><span>⚠️</span><div><small>Cuotas atrasadas</small><strong>3</strong><em>↑ 25% vs. mes anterior</em></div></article>
+          </section>
+
+          <section class="grid-3">
+            <article class="card chart-card">
+              <div class="card-head"><div><h2>Resumen financiero</h2><p>Préstamos y cobros acumulados</p></div><div class="legend"><span>● Prestado</span><span>● Cobrado</span></div></div>
+              <div class="chart">
+                <div class="y-labels"><span>S/ 30k</span><span>S/ 20k</span><span>S/ 10k</span><span>S/ 0</span></div>
+                <svg viewBox="0 0 700 250" preserveAspectRatio="none" aria-label="Gráfico financiero">
+                  <g class="gridlines">
+                    <line x1="50" y1="25" x2="680" y2="25"/><line x1="50" y1="90" x2="680" y2="90"/>
+                    <line x1="50" y1="155" x2="680" y2="155"/><line x1="50" y1="220" x2="680" y2="220"/>
+                  </g>
+                  <polyline class="line-a" points="50,165 130,135 210,120 290,95 370,70 450,55 530,60 605,40 680,25"/>
+                  <polyline class="line-b" points="50,185 130,160 210,150 290,135 370,105 450,92 530,93 605,70 680,55"/>
+                  <g class="dots-a"><circle cx="50" cy="165" r="5"/><circle cx="130" cy="135" r="5"/><circle cx="210" cy="120" r="5"/><circle cx="290" cy="95" r="5"/><circle cx="370" cy="70" r="5"/><circle cx="450" cy="55" r="5"/><circle cx="530" cy="60" r="5"/><circle cx="605" cy="40" r="5"/><circle cx="680" cy="25" r="5"/></g>
+                </svg>
+                <div class="x-labels"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span></div>
+              </div>
+            </article>
+
+            <article class="card distribution">
+              <div class="card-head"><div><h2>Distribución de préstamos</h2><p>Estado actual</p></div></div>
+              <div class="donut-wrap">
+                <div class="donut"><div><strong>48</strong><span>Clientes</span></div></div>
+                <div class="donut-legend"><span>🔵 Activos <b>38</b></span><span>🟢 Terminados <b>7</b></span><span>🔴 Atrasados <b>3</b></span></div>
+              </div>
+            </article>
+
+            <article class="card upcoming">
+              <div class="card-head"><h2>📅 Próximos pagos</h2><a href="#" data-module-link="calendario">Ver todos →</a></div>
+              <div class="payment-list">
+                <div><b>Juan Pérez</b><span>S/ 120 · Hoy</span><i class="pending">Pendiente</i></div>
+                <div><b>María López</b><span>S/ 150 · Mañana</span><i class="pending">Pendiente</i></div>
+                <div><b>Carlos Ruiz</b><span>S/ 100 · 16/09</span><i class="late">Atrasado</i></div>
+                <div><b>Ana Torres</b><span>S/ 120 · 17/09</span><i class="pending">Pendiente</i></div>
+                <div><b>Luis García</b><span>S/ 100 · 19/09</span><i class="pending">Pendiente</i></div>
+              </div>
+            </article>
+          </section>
+
+          <section class="grid-2">
+            <article class="card quick">
+              <div class="card-head"><h2>⚡ Acciones rápidas</h2></div>
+              <div class="quick-buttons">
+                <button class="primary" data-module-link="prestamos">＋ Nuevo préstamo</button>
+                <button class="success" data-module-link="clientes">＋ Nuevo cliente</button>
+                <button class="purple-btn" data-module-link="cobrar">💳 Registrar pago</button>
+              </div>
+            </article>
+
+            <article class="card ai-summary">
+              <div class="card-head"><h2>🤖 Resumen de la semana (IA)</h2><a href="#" data-module-link="ia">Ver detalle →</a></div>
+              <p>Esta semana tienes <b>5 cuotas pendientes</b> por un total de <b>S/ 620</b>.</p>
+              <p><b>2 clientes</b> presentan atraso.</p>
+            </article>
+          </section>
+
+          <section class="grid-2">
+            <article class="card table-card">
+              <div class="card-head"><h2>📋 Últimos préstamos</h2><a href="#" data-module-link="prestamos">Ver todos →</a></div>
+              <div class="table-scroll">
+                <table>
+                  <thead><tr><th>Cliente</th><th>Monto</th><th>Cuotas</th><th>Cuota</th><th>Pendiente</th><th>Estado</th></tr></thead>
+                  <tbody>
+                    <tr><td>Juan Pérez</td><td>S/ 1,000</td><td>14</td><td>S/ 120</td><td>S/ 600</td><td><i class="active-pill">Activo</i></td></tr>
+                    <tr><td>María López</td><td>S/ 500</td><td>10</td><td>S/ 65</td><td>S/ 200</td><td><i class="active-pill">Activo</i></td></tr>
+                    <tr><td>Carlos Ruiz</td><td>S/ 800</td><td>14</td><td>S/ 100</td><td>S/ 400</td><td><i class="late-pill">Atrasado</i></td></tr>
+                    <tr><td>Ana Torres</td><td>S/ 1,200</td><td>20</td><td>S/ 120</td><td>S/ 720</td><td><i class="active-pill">Activo</i></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="card activity">
+              <div class="card-head"><h2>🕘 Actividad reciente</h2><a href="#">Ver todas →</a></div>
+              <div class="activity-item"><span class="act-icon green-icon">💵</span><div><b>Juan Pérez pagó S/ 120</b><small>14/09/2026 · 10:24 a. m.</small></div></div>
+              <div class="activity-item"><span class="act-icon blue-icon">📄</span><div><b>Se creó un nuevo préstamo</b><small>María López · S/ 500 · 09:15 a. m.</small></div></div>
+              <div class="activity-item"><span class="act-icon red-icon">⚠️</span><div><b>Carlos Ruiz tiene 2 cuotas atrasadas</b><small>14/09/2026 · 08:40 a. m.</small></div></div>
+              <div class="activity-item"><span class="act-icon orange-icon">💼</span><div><b>Se registró un gasto en caja</b><small>Transporte · S/ 50</small></div></div>
+            </article>
+          </section>
+
+          <footer>Mi Préstamos v1.0 · Proyecto en desarrollo <span>Hecho con ❤️ para tu negocio</span></footer>
+        </div>
+
+        <!-- Placeholder modules: the navigation is already wired -->
+        <div id="module-clientes" class="module">
+<div class="module-toolbar"><div><h2>👥 Clientes</h2><p>Registra y consulta la información de tus clientes.</p></div><button class="primary action-btn" id="newClientBtn">＋ Nuevo cliente</button></div>
+<section class="client-stats">
+<article class="mini-stat"><span>👥</span><div><small>Total clientes</small><strong id="clientTotal">0</strong></div></article>
+<article class="mini-stat"><span>🟢</span><div><small>Activos</small><strong id="clientActive">0</strong></div></article>
+<article class="mini-stat"><span>🔴</span><div><small>Con atraso</small><strong id="clientLate">0</strong></div></article>
+</section>
+<section class="card client-list-card">
+<div class="filters"><div class="search-box">🔍 <input id="clientSearch" placeholder="Buscar por nombre, DNI o teléfono..."></div><select id="clientStatusFilter"><option value="todos">Todos los estados</option><option value="activo">Activos</option><option value="atrasado">Atrasados</option></select></div>
+<div class="table-scroll"><table><thead><tr><th>Cliente</th><th>DNI</th><th>Teléfono</th><th>Préstamos</th><th>Pendiente</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="clientsTable"></tbody></table></div>
+<div id="emptyClients" class="empty-state" hidden><div>👥</div><h3>No hay clientes</h3><p>Registra tu primer cliente para comenzar.</p></div>
+</section></div>
+<div class="modal-backdrop" id="clientModal" hidden><div class="modal">
+<div class="modal-head"><div><h2 id="clientModalTitle">Nuevo cliente</h2><p>Completa los datos básicos del cliente.</p></div><button class="close-btn" id="closeClientModal">×</button></div>
+<form id="clientForm"><input type="hidden" id="clientId"><div class="form-grid">
+<label>Nombre completo *<input id="clientName" required maxlength="100"></label><label>DNI<input id="clientDni" maxlength="8" inputmode="numeric"></label>
+<label>Teléfono<input id="clientPhone" maxlength="15"></label><label>Dirección<input id="clientAddress" maxlength="150"></label>
+<label>Referencia<input id="clientReference" maxlength="150"></label><label class="full">Observaciones<textarea id="clientNotes" rows="3" maxlength="300"></textarea></label>
+</div><div class="modal-actions"><button type="button" class="secondary-btn" id="cancelClient">Cancelar</button><button class="primary action-btn" type="submit">Guardar cliente</button></div></form>
+</div></div>
+<div class="modal-backdrop" id="profileModal" hidden><div class="modal wide">
+<div class="modal-head"><div><h2 id="profileName">Cliente</h2><p id="profileContact"></p></div><button class="close-btn" id="closeProfileModal">×</button></div>
+<div class="profile-grid"><article class="profile-summary"><span>Préstamos</span><strong id="profileLoans">0</strong></article><article class="profile-summary"><span>Total prestado</span><strong id="profileBorrowed">S/ 0</strong></article><article class="profile-summary"><span>Total cobrado</span><strong id="profilePaid">S/ 0</strong></article><article class="profile-summary"><span>Pendiente</span><strong id="profilePending">S/ 0</strong></article></div>
+<div class="profile-section"><h3>Información del cliente</h3><div id="profileDetails" class="details-grid"></div></div>
+<div class="profile-section"><h3>Historial de préstamos</h3><div class="empty-history">📋 Todavía no hay préstamos registrados para este cliente.</div></div>
+</div></div>
+        <div id="module-prestamos" class="module">
+          <div class="module-toolbar"><div><h2>💰 Préstamos</h2><p>Crea préstamos, calcula cuotas y genera el cronograma automáticamente.</p></div><button class="primary action-btn" id="newLoanBtn">＋ Nuevo préstamo</button></div>
+          <section class="client-stats loan-stats">
+            <article class="mini-stat"><span>💰</span><div><small>Total prestado</small><strong id="loanTotalBorrowed">S/ 0.00</strong></div></article>
+            <article class="mini-stat"><span>📄</span><div><small>Total por cobrar</small><strong id="loanTotalReceivable">S/ 0.00</strong></div></article>
+            <article class="mini-stat"><span>🟢</span><div><small>Préstamos activos</small><strong id="loanActiveCount">0</strong></div></article>
+          </section>
+          <section class="card client-list-card">
+            <div class="filters"><div class="search-box">🔍 <input id="loanSearch" placeholder="Buscar por cliente o código..."></div><select id="loanStatusFilter"><option value="todos">Todos los estados</option><option value="activo">Activos</option><option value="terminado">Terminados</option></select></div>
+            <div class="table-scroll"><table><thead><tr><th>Código</th><th>Cliente</th><th>Prestado</th><th>Cuotas</th><th>Cuota</th><th>Total</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="loansTable"></tbody></table></div>
+            <div id="emptyLoans" class="empty-state" hidden><div>💰</div><h3>No hay préstamos</h3><p>Crea el primer préstamo para comenzar.</p></div>
+          </section>
+        </div>
+        <div class="modal-backdrop" id="loanModal" hidden><div class="modal wide">
+          <div class="modal-head"><div><h2>Nuevo préstamo</h2><p>Ingresa los datos y revisa el cálculo antes de guardar.</p></div><button class="close-btn" id="closeLoanModal">×</button></div>
+          <form id="loanForm"><div class="form-grid">
+            <label>Cliente *<select id="loanClient" required></select></label><label>Monto prestado *<input id="loanAmount" type="number" min="0.01" step="0.01" required placeholder="1000.00"></label>
+            <label>Número de cuotas *<input id="loanInstallments" type="number" min="1" step="1" value="14" required></label><label>Frecuencia *<select id="loanFrequency" required><option value="diario">Diario</option><option value="semanal" selected>Semanal</option><option value="quincenal">Quincenal</option><option value="mensual">Mensual</option><option value="anual">Anual</option></select></label>
+            <label>Valor de cuota *<input id="loanInstallmentValue" type="number" min="0.01" step="0.01" required placeholder="100.00"></label><label>Fecha del préstamo *<input id="loanStartDate" type="date" required></label>
+            <label>Primera fecha de pago *<input id="loanFirstDueDate" type="date" required></label><label>Observaciones<input id="loanNotes" maxlength="250" placeholder="Opcional"></label>
+          </div>
+          <div class="loan-calc"><div><small>Monto prestado</small><strong id="calcPrincipal">S/ 0.00</strong></div><div><small>Total a cobrar</small><strong id="calcTotal">S/ 0.00</strong></div><div><small>Ganancia</small><strong id="calcProfit">S/ 0.00</strong></div><div><small>Valor por cuota</small><strong id="calcInstallment">S/ 0.00</strong></div></div>
+          <div class="schedule-preview"><div class="card-head"><div><h3>Cronograma</h3><p>Se genera automáticamente según la frecuencia.</p></div><span class="schedule-count" id="scheduleCount">0 cuotas</span></div><div class="table-scroll"><table><thead><tr><th>#</th><th>Vencimiento</th><th>Cuota</th><th>Estado</th></tr></thead><tbody id="schedulePreview"></tbody></table></div></div>
+          <div class="modal-actions"><button type="button" class="secondary-btn" id="cancelLoan">Cancelar</button><button class="primary action-btn" type="submit">Guardar préstamo</button></div></form>
+        </div></div>
+        <div class="modal-backdrop" id="loanDetailModal" hidden><div class="modal wide">
+          <div class="modal-head"><div><h2 id="loanDetailTitle">Préstamo</h2><p id="loanDetailSubtitle"></p></div><button class="close-btn" id="closeLoanDetail">×</button></div>
+          <div class="profile-grid"><article class="profile-summary"><span>Prestado</span><strong id="detailPrincipal">S/ 0.00</strong></article><article class="profile-summary"><span>Total a cobrar</span><strong id="detailTotal">S/ 0.00</strong></article><article class="profile-summary"><span>Ganancia</span><strong id="detailProfit">S/ 0.00</strong></article><article class="profile-summary"><span>Cuota</span><strong id="detailInstallment">S/ 0.00</strong></article></div>
+          <div class="profile-section"><h3>📅 Cronograma completo</h3><div class="table-scroll"><table><thead><tr><th>#</th><th>Vencimiento</th><th>Cuota</th><th>Pagado</th><th>Saldo</th><th>Estado</th></tr></thead><tbody id="loanDetailSchedule"></tbody></table></div></div>
+        </div></div>
+        <div id="module-cobrar" class="module placeholder"><h2>💵 Cobrar</h2><p>Pantalla rápida para registrar cuotas completas o parciales.</p></div>
+        <div id="module-pagos" class="module">
+          <div class="module-toolbar"><div><h2>💳 Pagos</h2><p>Registra cobros, pagos parciales y consulta el historial.</p></div><button class="primary action-btn" id="newPaymentBtn">＋ Registrar pago</button></div>
+          <section class="client-stats payment-stats">
+            <article class="mini-stat"><span>💵</span><div><small>Total cobrado</small><strong id="paymentTotalCollected">S/ 0.00</strong></div></article>
+            <article class="mini-stat"><span>🧾</span><div><small>Pagos registrados</small><strong id="paymentCount">0</strong></div></article>
+            <article class="mini-stat"><span>⏳</span><div><small>Cuotas pendientes</small><strong id="paymentPendingCount">0</strong></div></article>
+          </section>
+          <section class="card client-list-card">
+            <div class="filters"><div class="search-box">🔍 <input id="paymentSearch" placeholder="Buscar por cliente, préstamo o cuota..."></div><select id="paymentMethodFilter"><option value="todos">Todos los métodos</option><option value="efectivo">Efectivo</option><option value="yape">Yape</option><option value="plin">Plin</option><option value="transferencia">Transferencia</option><option value="otro">Otro</option></select></div>
+            <div class="table-scroll"><table><thead><tr><th>Fecha</th><th>Cliente</th><th>Préstamo</th><th>Cuota</th><th>Monto</th><th>Método</th><th>Acciones</th></tr></thead><tbody id="paymentsTable"></tbody></table></div>
+            <div id="emptyPayments" class="empty-state" hidden><div>💳</div><h3>No hay pagos registrados</h3><p>Registra el primer pago para comenzar el historial.</p></div>
+          </section>
+        </div>
+        <div class="modal-backdrop" id="paymentModal" hidden><div class="modal wide">
+          <div class="modal-head"><div><h2>Registrar pago</h2><p>El pago se aplicará a una cuota específica y actualizará el saldo automáticamente.</p></div><button class="close-btn" id="closePaymentModal">×</button></div>
+          <form id="paymentForm"><div class="form-grid">
+            <label>Cliente *<select id="paymentClient" required></select></label>
+            <label>Préstamo *<select id="paymentLoan" required></select></label>
+            <label>Cuota *<select id="paymentInstallment" required></select></label>
+            <label>Fecha de pago *<input id="paymentDate" type="date" required></label>
+            <label>Monto pagado *<input id="paymentAmount" type="number" min="0.01" step="0.01" required placeholder="100.00"></label>
+            <label>Método *<select id="paymentMethod" required><option value="efectivo">Efectivo</option><option value="yape">Yape</option><option value="plin">Plin</option><option value="transferencia">Transferencia</option><option value="otro">Otro</option></select></label>
+            <label class="full">Observación<input id="paymentNotes" maxlength="250" placeholder="Opcional"></label>
+          </div>
+          <div class="payment-calc"><div><small>Cuota</small><strong id="paymentDueAmount">S/ 0.00</strong></div><div><small>Pagado antes</small><strong id="paymentAlreadyPaid">S/ 0.00</strong></div><div><small>Saldo actual</small><strong id="paymentCurrentBalance">S/ 0.00</strong></div><div><small>Saldo después</small><strong id="paymentAfterBalance">S/ 0.00</strong></div></div>
+          <p id="paymentWarning" class="form-warning" hidden></p>
+          <div class="modal-actions"><button type="button" class="secondary-btn" id="cancelPayment">Cancelar</button><button class="primary action-btn" type="submit">Guardar pago</button></div></form>
+        </div></div>
+        <div class="modal-backdrop" id="paymentDetailModal" hidden><div class="modal">
+          <div class="modal-head"><div><h2>Detalle del pago</h2><p id="paymentDetailSubtitle"></p></div><button class="close-btn" id="closePaymentDetail">×</button></div>
+          <div class="profile-grid" style="grid-template-columns:repeat(3,1fr)"><article class="profile-summary"><span>Cliente</span><strong id="detailPaymentClient">—</strong></article><article class="profile-summary"><span>Monto</span><strong id="detailPaymentAmount">S/ 0.00</strong></article><article class="profile-summary"><span>Método</span><strong id="detailPaymentMethod">—</strong></article></div>
+          <div class="profile-section"><div id="detailPaymentInfo" class="details-grid"></div></div>
+        </div></div>
+        <div id="module-calendario" class="module placeholder"><h2>📅 Calendario</h2><p>Calendario de vencimientos y cobros.</p></div>
+        <div id="module-atrasados" class="module placeholder"><h2>🔴 Atrasados</h2><p>Control de cuotas vencidas y clientes morosos.</p></div>
+        <div id="module-caja" class="module placeholder"><h2>💼 Caja</h2><p>Ingresos, gastos, saldo y cierre de caja.</p></div>
+        <div id="module-reportes" class="module placeholder"><h2>📊 Reportes</h2><p>Indicadores, gráficos y exportaciones.</p></div>
+        <div id="module-ia" class="module placeholder"><h2>🤖 Asistente IA</h2><p>Consultas sobre tus préstamos, pagos, atrasos y caja.</p></div>
+        <div id="module-configuracion" class="module placeholder"><h2>⚙️ Configuración</h2><p>Frecuencias, métodos de cálculo, pagos, usuarios y permisos.</p></div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
